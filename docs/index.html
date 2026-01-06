@@ -48,7 +48,7 @@
                 <h1>Real-time Financial Analytics Platform</h1>
                 <p>A comprehensive big data solution for processing and visualizing financial market data in real-time. Built with modern technologies including Apache Kafka, Spark, React, and TimescaleDB.</p>
                 <div class="hero-buttons">
-                    <a href="#demo" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary" onclick="openDemoModal(); return false;">
                         <i class="fas fa-play"></i>
                         View Live Demo
                     </a>
@@ -369,17 +369,17 @@ cd realtime-financial-analytics
 ./setup.sh</code></pre>
                     </div>
                     <div class="demo-links">
-                        <a href="http://localhost:3000" class="demo-link" target="_blank">
+                        <a href="#" class="demo-link" onclick="openDemoModal(); return false;">
                             <i class="fas fa-external-link-alt"></i>
-                            Live Dashboard
+                            Live Dashboard (Demo)
                         </a>
-                        <a href="http://localhost:8000/docs" class="demo-link" target="_blank">
+                        <a href="#" class="demo-link" onclick="openDemoModal(); return false;">
                             <i class="fas fa-book"></i>
-                            API Documentation
+                            API Documentation (Demo)
                         </a>
-                        <a href="http://localhost:3001" class="demo-link" target="_blank">
+                        <a href="#" class="demo-link" onclick="openDemoModal(); return false;">
                             <i class="fas fa-chart-bar"></i>
-                            Monitoring
+                            Monitoring (Demo)
                         </a>
                     </div>
                 </div>
@@ -542,25 +542,25 @@ cd realtime-financial-analytics
             <div class="access-info">
                 <h3>Access Your Services</h3>
                 <div class="service-links">
-                    <a href="http://localhost:3000" class="service-link">
+                    <a href="#" class="service-link" onclick="openDemoModal(); return false;">
                         <i class="fas fa-chart-line"></i>
                         <div>
-                            <strong>Dashboard</strong>
-                            <span>localhost:3000</span>
+                            <strong>Dashboard (Demo)</strong>
+                            <span>Run setup.ps1 to start</span>
                         </div>
                     </a>
-                    <a href="http://localhost:8000/docs" class="service-link">
+                    <a href="#" class="service-link" onclick="openDemoModal(); return false;">
                         <i class="fas fa-book"></i>
                         <div>
-                            <strong>API Docs</strong>
-                            <span>localhost:8000/docs</span>
+                            <strong>API Docs (Demo)</strong>
+                            <span>Run setup.ps1 to start</span>
                         </div>
                     </a>
-                    <a href="http://localhost:3001" class="service-link">
+                    <a href="#" class="service-link" onclick="openDemoModal(); return false;">
                         <i class="fas fa-chart-bar"></i>
                         <div>
-                            <strong>Monitoring</strong>
-                            <span>localhost:3001</span>
+                            <strong>Monitoring (Demo)</strong>
+                            <span>Run setup.ps1 to start</span>
                         </div>
                     </a>
                 </div>
@@ -624,6 +624,127 @@ cd realtime-financial-analytics
         </div>
     </footer>
 
+    <!-- Interactive Demo Modal -->
+    <div id="demoModal" class="demo-modal">
+        <div class="demo-modal-content">
+            <div class="demo-modal-header">
+                <h2>
+                    <i class="fas fa-chart-line"></i>
+                    Real-time Financial Analytics - Interactive Demo
+                </h2>
+                <span class="close-modal" onclick="closeDemoModal()">&times;</span>
+            </div>
+            <div class="demo-modal-body">
+                <div class="demo-dashboard">
+                    <div class="demo-nav">
+                        <div class="demo-logo">
+                            <i class="fas fa-chart-line"></i>
+                            <span>FinAnalytics</span>
+                        </div>
+                        <div class="demo-live-indicator">
+                            <span class="demo-pulse"></span>
+                            LIVE DATA
+                        </div>
+                    </div>
+                    
+                    <div class="demo-stats-grid">
+                        <div class="demo-stat-card">
+                            <div class="demo-stat-header">
+                                <span>AAPL</span>
+                                <span class="demo-positive" id="aapl-change">+2.45%</span>
+                            </div>
+                            <div class="demo-stat-price" id="aapl-price">$150.25</div>
+                            <div class="demo-stat-volume">Vol: <span id="aapl-volume">1.2M</span></div>
+                        </div>
+                        
+                        <div class="demo-stat-card">
+                            <div class="demo-stat-header">
+                                <span>GOOGL</span>
+                                <span class="demo-negative" id="googl-change">-1.23%</span>
+                            </div>
+                            <div class="demo-stat-price" id="googl-price">$2,785.50</div>
+                            <div class="demo-stat-volume">Vol: <span id="googl-volume">890K</span></div>
+                        </div>
+                        
+                        <div class="demo-stat-card">
+                            <div class="demo-stat-header">
+                                <span>TSLA</span>
+                                <span class="demo-positive" id="tsla-change">+5.67%</span>
+                            </div>
+                            <div class="demo-stat-price" id="tsla-price">$245.80</div>
+                            <div class="demo-stat-volume">Vol: <span id="tsla-volume">3.4M</span></div>
+                        </div>
+                        
+                        <div class="demo-stat-card">
+                            <div class="demo-stat-header">
+                                <span>MSFT</span>
+                                <span class="demo-positive" id="msft-change">+1.89%</span>
+                            </div>
+                            <div class="demo-stat-price" id="msft-price">$342.15</div>
+                            <div class="demo-stat-volume">Vol: <span id="msft-volume">1.8M</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-chart-container">
+                        <div class="demo-chart-header">
+                            <h3>Real-time Price Chart</h3>
+                            <div class="demo-chart-controls">
+                                <button class="demo-chart-btn active" data-symbol="AAPL">AAPL</button>
+                                <button class="demo-chart-btn" data-symbol="GOOGL">GOOGL</button>
+                                <button class="demo-chart-btn" data-symbol="TSLA">TSLA</button>
+                                <button class="demo-chart-btn" data-symbol="MSFT">MSFT</button>
+                            </div>
+                        </div>
+                        <div class="demo-chart">
+                            <svg id="demo-chart-svg" width="100%" height="200">
+                                <path id="demo-chart-line" stroke="#10b981" stroke-width="3" fill="none"/>
+                                <circle id="demo-chart-dot" r="4" fill="#10b981"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-alerts">
+                        <div class="demo-alert demo-alert-success">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>TSLA broke resistance at $240! Strong momentum detected.</span>
+                        </div>
+                        <div class="demo-alert demo-alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>High volume spike detected for AAPL - 200% above average.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-footer">
+                        <div class="demo-footer-left">
+                            <i class="fas fa-database"></i>
+                            <span>10,847 records/sec</span>
+                        </div>
+                        <div class="demo-footer-center">
+                            <i class="fas fa-clock"></i>
+                            <span>Latency: 0.2s</span>
+                        </div>
+                        <div class="demo-footer-right">
+                            <i class="fas fa-server"></i>
+                            <span>All systems operational</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-actions">
+                    <button class="btn btn-secondary" onclick="closeDemoModal()">
+                        <i class="fas fa-times"></i>
+                        Close Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        function showDemoMessage() {
+            alert('🚀 To see the live dashboard:\n\n1. Run: .\\setup.ps1\n2. Wait for all services to start\n3. Open: http://localhost:3000\n\nThis will start the complete Real-time Financial Analytics Platform with:\n• Live stock data streaming\n• Interactive charts\n• Real-time WebSocket updates\n• API documentation\n• Monitoring dashboards\n\nFor now, this showcase website demonstrates your technical capabilities to recruiters!');
+        }
+    </script>
 </body>
 </html>

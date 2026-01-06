@@ -251,4 +251,153 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Real-time Financial Analytics Platform website loaded successfully!');
     console.log('🚀 Ready to showcase your skills to recruiters!');
+    
+    // Initialize interactive demo
+    initializeDemo();
 });
+
+// Interactive Demo Functions
+function openDemoModal() {
+    const modal = document.getElementById('demoModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    startDemoAnimation();
+}
+
+function closeDemoModal() {
+    const modal = document.getElementById('demoModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    stopDemoAnimation();
+}
+
+let demoInterval;
+let chartData = [];
+
+function initializeDemo() {
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('demoModal');
+        if (event.target === modal) {
+            closeDemoModal();
+        }
+    };
+    
+    // Chart button interactions
+    document.querySelectorAll('.demo-chart-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.demo-chart-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateChart(this.dataset.symbol);
+        });
+    });
+    
+    // Initialize chart data
+    generateChartData();
+}
+
+function startDemoAnimation() {
+    // Update stock prices every 2 seconds
+    demoInterval = setInterval(() => {
+        updateStockPrices();
+        updateChart();
+    }, 2000);
+    
+    // Initial chart draw
+    drawChart();
+}
+
+function stopDemoAnimation() {
+    if (demoInterval) {
+        clearInterval(demoInterval);
+    }
+}
+
+function updateStockPrices() {
+    const stocks = ['aapl', 'googl', 'tsla', 'msft'];
+    const baseprices = { aapl: 150, googl: 2785, tsla: 245, msft: 342 };
+    
+    stocks.forEach(stock => {
+        // Generate realistic price movements
+        const changePercent = (Math.random() - 0.5) * 4; // -2% to +2%
+        const newPrice = baseprices[stock] * (1 + changePercent / 100);
+        const volume = (Math.random() * 2 + 0.5).toFixed(1) + 'M';
+        
+        // Update UI
+        const priceEl = document.getElementById(`${stock}-price`);
+        const changeEl = document.getElementById(`${stock}-change`);
+        const volumeEl = document.getElementById(`${stock}-volume`);
+        
+        if (priceEl) priceEl.textContent = `$${newPrice.toFixed(2)}`;
+        if (changeEl) {
+            changeEl.textContent = `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%`;
+            changeEl.className = changePercent >= 0 ? 'demo-positive' : 'demo-negative';
+        }
+        if (volumeEl) volumeEl.textContent = volume;
+    });
+}
+
+function generateChartData() {
+    chartData = [];
+    const basePrice = 150;
+    
+    for (let i = 0; i < 50; i++) {
+        const variation = (Math.random() - 0.5) * 10;
+        chartData.push({
+            x: i * 8,
+            y: 100 + variation + Math.sin(i / 5) * 20
+        });
+    }
+}
+
+function drawChart() {
+    const svg = document.getElementById('demo-chart-svg');
+    const line = document.getElementById('demo-chart-line');
+    const dot = document.getElementById('demo-chart-dot');
+    
+    if (!svg || !line || !dot) return;
+    
+    const svgRect = svg.getBoundingClientRect();
+    const width = svgRect.width;
+    const height = 200;
+    
+    // Generate path
+    let pathData = '';
+    chartData.forEach((point, i) => {
+        const x = (point.x / 400) * width;
+        const y = height - (point.y / 200) * height;
+        pathData += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
+    });
+    
+    line.setAttribute('d', pathData);
+    
+    // Position dot at the end
+    if (chartData.length > 0) {
+        const lastPoint = chartData[chartData.length - 1];
+        const x = (lastPoint.x / 400) * width;
+        const y = height - (lastPoint.y / 200) * height;
+        dot.setAttribute('cx', x);
+        dot.setAttribute('cy', y);
+    }
+}
+
+function updateChart(symbol = 'AAPL') {
+    // Add new data point
+    if (chartData.length > 50) {
+        chartData.shift();
+    }
+    
+    const lastY = chartData[chartData.length - 1].y;
+    const newY = lastY + (Math.random() - 0.5) * 10;
+    
+    chartData.forEach((point, i) => {
+        point.x = i * 8;
+    });
+    
+    chartData.push({
+        x: (chartData.length - 1) * 8,
+        y: Math.max(50, Math.min(150, newY))
+    });
+    
+    drawChart();
+}
