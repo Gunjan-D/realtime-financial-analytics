@@ -1,6 +1,6 @@
 # Real-Time Financial Data Analytics Platform
 
-> **🌐 [View Live Project Website](https://gunjan-d.github.io/realtime-financial-analytics/)**
+> **🌐 [View Live Project Website](https://Gunjan-D.github.io/realtime-financial-analytics/)**
 
 A comprehensive real-time data pipeline and analytics dashboard demonstrating modern big data engineering practices.
 
@@ -61,7 +61,7 @@ This project implements a scalable, real-time financial data processing pipeline
 - Prometheus (monitoring)
 - Grafana (dashboards)
 
-## 🏃‍♂️ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -162,9 +162,9 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## 📊 Key Metrics & KPIs
+## Key Metrics & KPIs
 
-> **🎯 [Explore Interactive Project Showcase](https://yourusername.github.io/realtime-financial-analytics/)**
+> ** [Explore Interactive Project Showcase](https://Gunjan-D.github.io/realtime-financial-analytics/)**
 
 This project demonstrates proficiency in:
 
@@ -174,7 +174,7 @@ This project demonstrates proficiency in:
 - **Reliability**: 99.9% uptime with proper error handling
 - **Performance**: Optimized queries with proper indexing
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### Local Development
 - Docker Compose setup for local development
@@ -185,7 +185,7 @@ This project demonstrates proficiency in:
 - CI/CD pipeline with GitHub Actions
 - Infrastructure as Code with Terraform
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Backend tests
@@ -198,14 +198,14 @@ cd frontend && npm test
 docker-compose -f docker-compose.test.yml up
 ```
 
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 - **Application Metrics**: Custom Prometheus metrics
 - **System Monitoring**: Resource usage and performance
 - **Business Metrics**: Trading volume, price movements
 - **Alerting**: Slack/Email notifications for critical events
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -213,25 +213,18 @@ docker-compose -f docker-compose.test.yml up
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Alpha Vantage for financial data API
 - Apache Software Foundation for Kafka & Spark
 - The amazing open-source community
 
 ---
-
-**⭐ Star this repository if it helped you land your dream job!**
-
-## 📞 Contact
+## Contact
 
 For questions about this project or hiring opportunities:
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Email**: your.email@example.com
-- **Portfolio**: [Your Portfolio Website]
+- **LinkedIn**: [[Your LinkedIn Profile](https://www.linkedin.com/in/gunjan-deshpande/)]
+- **Email**: gunjandeshpande490@gmail.com
+- **Portfolio**: [[Your Portfolio Website](https://gunjan-d.github.io/)]
 
 *Built with ❤️ for showcasing modern data engineering skills*
