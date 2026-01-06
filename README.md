@@ -1,6 +1,6 @@
 # Real-Time Financial Data Analytics Platform
 
-> **🌐 [View Live Project Website](https://yourusername.github.io/realtime-financial-analytics/)**
+> **🌐 [View Live Project Website](https://gunjan-d.github.io/realtime-financial-analytics/)**
 
 A comprehensive real-time data pipeline and analytics dashboard demonstrating modern big data engineering practices.
 
