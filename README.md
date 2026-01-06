@@ -71,7 +71,7 @@ This project implements a scalable, real-time financial data processing pipeline
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/realtime-financial-analytics.git
+git clone https://github.com/Gunjan-D/realtime-financial-analytics.git
 cd realtime-financial-analytics
 ```
 
