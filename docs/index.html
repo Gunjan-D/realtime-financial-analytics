@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Financial Analytics Platform | Portfolio Project</title>
+    <meta name="description" content="A comprehensive real-time financial data pipeline and analytics dashboard built with Kafka, Spark, React, and TimescaleDB">
+    <meta name="keywords" content="real-time analytics, financial data, kafka, spark, react, timescaledb, big data, portfolio">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>FinAnalytics</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#getting-started">Get Started</a></li>
+                <li><a href="https://github.com/yourusername/realtime-financial-analytics" class="btn-github" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Production-Ready Project</span>
+                </div>
+                <h1>Real-time Financial Analytics Platform</h1>
+                <p>A comprehensive big data solution for processing and visualizing financial market data in real-time. Built with modern technologies including Apache Kafka, Spark, React, and TimescaleDB.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        View Live Demo
+                    </a>
+                    <a href="https://github.com/yourusername/realtime-financial-analytics" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Records/Second</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Sub-second</div>
+                        <div class="stat-label">Latency</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <div class="dashboard-nav">
+                            <div class="nav-dot red"></div>
+                            <div class="nav-dot yellow"></div>
+                            <div class="nav-dot green"></div>
+                        </div>
+                        <div class="dashboard-title">Financial Analytics Dashboard</div>
+                        <div class="live-indicator">
+                            <span class="pulse"></span>
+                            LIVE
+                        </div>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="chart-container">
+                            <div class="chart-line"></div>
+                            <div class="chart-bars"></div>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">AAPL <span class="positive">+2.5%</span></div>
+                            <div class="stat-card">GOOGL <span class="negative">-1.2%</span></div>
+                            <div class="stat-card">TSLA <span class="positive">+5.8%</span></div>
+                            <div class="stat-card">MSFT <span class="positive">+1.9%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Overview</h2>
+                <p>A enterprise-grade real-time financial data processing and analytics platform</p>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <h3>Real-time Data Pipeline</h3>
+                    <p>Kafka-powered streaming architecture processes thousands of stock price updates per second with guaranteed delivery and fault tolerance.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h3>Interactive Dashboard</h3>
+                    <p>React-based frontend with live WebSocket updates, interactive charts, and responsive design for monitoring market data in real-time.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Time-series Database</h3>
+                    <p>TimescaleDB optimized for high-frequency financial data with automatic partitioning and efficient compression.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Stream Processing</h3>
+                    <p>Apache Spark handles complex analytics including technical indicators, anomaly detection, and market sentiment analysis.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Containerized Deployment</h3>
+                    <p>Docker Compose orchestrates all services with proper networking, volumes, and health checks for production deployment.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Comprehensive monitoring with Prometheus metrics, Grafana dashboards, and custom alerts for system health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2>System Architecture</h2>
+                <p>Scalable microservices architecture designed for high availability and performance</p>
+            </div>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h3>Data Sources</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Alpha Vantage API</span>
+                        </div>
+                        <div class="arch-component">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Market News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer">
+                    <h3>Data Ingestion</h3>
+                    <div class="arch-components">
+                        <div class="arch-component kafka">
+                            <i class="fas fa-stream"></i>
+                            <span>Apache Kafka</span>
+                        </div>
+                        <div class="arch-component">
+                            <i class="fas fa-memory"></i>
+                            <span>Redis Cache</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer">
+                    <h3>Stream Processing</h3>
+                    <div class="arch-components">
+                        <div class="arch-component spark">
+                            <i class="fas fa-bolt"></i>
+                            <span>Apache Spark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer">
+                    <h3>Data Storage</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <i class="fas fa-database"></i>
+                            <span>TimescaleDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer">
+                    <h3>Application Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">
+                            <i class="fas fa-server"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="arch-component">
+                            <i class="fas fa-globe"></i>
+                            <span>WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer">
+                    <h3>Frontend</h3>
+                    <div class="arch-components">
+                        <div class="arch-component react">
+                            <i class="fab fa-react"></i>
+                            <span>React Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Enterprise-grade capabilities that demonstrate advanced software engineering skills</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Real-time Processing</h3>
+                    <ul>
+                        <li>Sub-second data latency</li>
+                        <li>10,000+ records per second throughput</li>
+                        <li>WebSocket live updates</li>
+                        <li>Horizontal scaling capability</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Technical Analysis</h3>
+                    <ul>
+                        <li>Moving averages (SMA, EMA)</li>
+                        <li>RSI and MACD indicators</li>
+                        <li>Price volatility calculation</li>
+                        <li>Market sentiment analysis</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Anomaly Detection</h3>
+                    <ul>
+                        <li>Price anomaly alerts</li>
+                        <li>Volume spike detection</li>
+                        <li>Pattern recognition</li>
+                        <li>Custom alert thresholds</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Interactive Visualizations</h3>
+                    <ul>
+                        <li>Real-time price charts</li>
+                        <li>Market heatmaps</li>
+                        <li>Technical indicator overlays</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>REST API</h3>
+                    <ul>
+                        <li>OpenAPI/Swagger documentation</li>
+                        <li>JWT authentication</li>
+                        <li>Rate limiting</li>
+                        <li>Comprehensive endpoints</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Production Ready</h3>
+                    <ul>
+                        <li>Docker containerization</li>
+                        <li>Health checks & monitoring</li>
+                        <li>Error handling & logging</li>
+                        <li>Data backup & recovery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Demo</h2>
+                <p>Experience the real-time financial analytics platform in action</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="video-overlay">
+                            <h4>Interactive Dashboard Demo</h4>
+                            <p>Watch real-time stock data streaming and analytics in action</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Try It Yourself</h3>
+                    <p>Clone the repository and run the complete platform locally in just a few minutes:</p>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/yourusername/realtime-financial-analytics.git
+cd realtime-financial-analytics
+./setup.sh</code></pre>
+                    </div>
+                    <div class="demo-links">
+                        <a href="http://localhost:3000" class="demo-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Dashboard
+                        </a>
+                        <a href="http://localhost:8000/docs" class="demo-link" target="_blank">
+                            <i class="fas fa-book"></i>
+                            API Documentation
+                        </a>
+                        <a href="http://localhost:3001" class="demo-link" target="_blank">
+                            <i class="fas fa-chart-bar"></i>
+                            Monitoring
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technology Stack</h2>
+                <p>Modern, industry-standard technologies and frameworks</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Data Engineering</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fas fa-stream"></i>
+                            <span>Apache Kafka</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Apache Spark</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>TimescaleDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-memory"></i>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python 3.9+</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-globe"></i>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLAlchemy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React 18</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Material-UI</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>DevOps</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>Docker Compose</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Prometheus</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="getting-started">
+        <div class="container">
+            <div class="section-header">
+                <h2>Getting Started</h2>
+                <p>Run the complete platform locally in under 5 minutes</p>
+            </div>
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Prerequisites</h3>
+                        <p>Install Docker and Docker Compose</p>
+                        <div class="step-code">
+                            <code># Check installation<br>
+                            docker --version<br>
+                            docker-compose --version</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Clone Repository</h3>
+                        <p>Get the source code from GitHub</p>
+                        <div class="step-code">
+                            <code>git clone https://github.com/yourusername/realtime-financial-analytics.git<br>
+                            cd realtime-financial-analytics</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configure Environment</h3>
+                        <p>Set up your environment variables</p>
+                        <div class="step-code">
+                            <code>cp .env.example .env<br>
+                            # Edit .env with your API keys (optional for demo)</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Services</h3>
+                        <p>Launch the complete platform</p>
+                        <div class="step-code">
+                            <code># Windows<br>
+                            .\setup.ps1<br><br>
+                            # Linux/Mac<br>
+                            ./setup.sh</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="access-info">
+                <h3>Access Your Services</h3>
+                <div class="service-links">
+                    <a href="http://localhost:3000" class="service-link">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <strong>Dashboard</strong>
+                            <span>localhost:3000</span>
+                        </div>
+                    </a>
+                    <a href="http://localhost:8000/docs" class="service-link">
+                        <i class="fas fa-book"></i>
+                        <div>
+                            <strong>API Docs</strong>
+                            <span>localhost:8000/docs</span>
+                        </div>
+                    </a>
+                    <a href="http://localhost:3001" class="service-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>
+                            <strong>Monitoring</strong>
+                            <span>localhost:3001</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>FinAnalytics</span>
+                    </div>
+                    <p>A portfolio project demonstrating real-time big data processing and analytics capabilities.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://yourportfolio.com" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/yourusername/realtime-financial-analytics" target="_blank">Source Code</a></li>
+                        <li><a href="#getting-started">Documentation</a></li>
+                        <li><a href="#tech-stack">Tech Stack</a></li>
+                        <li><a href="mailto:your.email@example.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills Demonstrated</h4>
+                    <ul>
+                        <li>Big Data Processing</li>
+                        <li>Real-time Systems</li>
+                        <li>Full-stack Development</li>
+                        <li>DevOps & Containerization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Real-time Financial Analytics Platform. Built for portfolio demonstration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

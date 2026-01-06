@@ -1,5 +1,7 @@
 # Real-Time Financial Data Analytics Platform
 
+> **🌐 [View Live Project Website](https://yourusername.github.io/realtime-financial-analytics/)**
+
 A comprehensive real-time data pipeline and analytics dashboard demonstrating modern big data engineering practices.
 
 ## 🏗️ Architecture Overview
@@ -161,6 +163,8 @@ python src/main.py
 ```
 
 ## 📊 Key Metrics & KPIs
+
+> **🎯 [Explore Interactive Project Showcase](https://yourusername.github.io/realtime-financial-analytics/)**
 
 This project demonstrates proficiency in:
 
