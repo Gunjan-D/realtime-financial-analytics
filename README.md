@@ -19,25 +19,25 @@ This project implements a scalable, real-time financial data processing pipeline
 ## 🚀 Features
 
 ### Real-Time Data Pipeline
-- 📈 Live stock price streaming from Alpha Vantage API
-- 🔄 Kafka message queuing for reliable data delivery
-- ⚡ Spark Streaming for real-time data processing
-- 📊 Real-time technical indicators calculation (RSI, MACD, Moving Averages)
+- Live stock price streaming from Alpha Vantage API
+- Kafka message queuing for reliable data delivery
+- Spark Streaming for real-time data processing
+- Real-time technical indicators calculation (RSI, MACD, Moving Averages)
 
 ### Analytics Dashboard
-- 📱 Responsive React-based web interface
-- 📊 Interactive charts with real-time updates
-- 🎯 Stock portfolio tracking and analysis
-- 🚨 Real-time alerts for price movements
-- 📈 Technical analysis indicators visualization
+- Responsive React-based web interface
+- Interactive charts with real-time updates
+- Stock portfolio tracking and analysis
+- Real-time alerts for price movements
+- Technical analysis indicators visualization
 
 ### Backend Services
-- 🏪 FastAPI REST API for data access
-- 🔐 JWT authentication
-- 📝 OpenAPI documentation
-- 🗄️ Efficient time-series data storage
+- FastAPI REST API for data access
+- JWT authentication
+- OpenAPI documentation
+- Efficient time-series data storage
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend & Data Processing:**
 - Python 3.9+
